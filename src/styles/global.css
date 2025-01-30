@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; /* Garante que o body e html ocupem toda a altura da tela */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o .app ocupe pelo menos toda a altura da tela */
+}
+
+.skills, .projects, .contact {
+  flex-grow: 1;
+  padding: 60px 20px;
+  text-align: center;
+}
