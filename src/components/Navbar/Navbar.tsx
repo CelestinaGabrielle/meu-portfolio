@@ -1,14 +1,23 @@
 import React from "react";
-import "./Navbar.css"; // Importação do CSS
+import styles from "./Navbar.module.css"; // Importação do CSS Module
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar">
-      <ul className="nav-list">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contatos">Contatos</a></li>
+    <nav className={styles.navbar}>
+      <h1 className={styles.navTitle}>Bem-vindo ao meu Portfólio</h1>
+      <ul className={styles.navList}>
+        <li className={styles.navItem}>
+          <a href="#sobre" className={styles.navLink}>Sobre</a>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#habilidades" className={styles.navLink}>Habilidades</a>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#projetos" className={styles.navLink}>Projetos</a>
+        </li>
+        <li className={styles.navItem}>
+          <a href="#contatos" className={styles.navLink}>Contatos</a>
+        </li>
       </ul>
     </nav>
   );

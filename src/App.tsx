@@ -9,12 +9,11 @@ import About from "./components/About/About";
 const App: React.FC = () => {
   return (
     <div className="app">
-      <Header /> {/* Componente Header (se necessário) */}
-      <About /> {/* Componente About */}
+      <Header /> 
+      <About />
       <Skills />
       <Projects />
       <Contact />
-
     </div>
   );
 };
