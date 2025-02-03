@@ -1,14 +1,12 @@
-/* Header */
 .header {
-  position: sticky; /* Alterado de fixed para sticky */
-  top: 0; /* Define o ponto onde o header "gruda" */
+  position: sticky;
+  top: 0; 
   width: 100%;
   color: #fff;
   background-color: #310644;
-  z-index: 100; /* Garante que o header fique acima de outros elementos */
+  z-index: 100; 
 }
 
-/* Container */
 .container {
   display: flex;
   justify-content: space-between;
@@ -17,7 +15,6 @@
   gap: 100px;
 }
 
-/* Menu Icon */
 .menuIcon {
   background: none;
   border: none;
@@ -25,15 +22,13 @@
 }
 
 .menuIcon:hover {
-  transform: scale(0.8); /* Reduz o tamanho do ícone para 90% */
+  transform: scale(0.8); 
 }
 
-/* Title */
 h1 {
   font-size: 1.5rem;
 }
 
-/* Toggle Switch */
 .toggleSwitch {
   position: relative;
   width: 50px;

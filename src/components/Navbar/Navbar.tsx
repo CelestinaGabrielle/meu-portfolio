@@ -1,23 +1,28 @@
 import React from "react";
-import styles from "./Navbar.module.css"; // Importação do CSS Module
+import styles from "./Navbar.module.css";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  isOpen: boolean;
+  toggleNavbar: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isOpen ? styles.open : styles.closed}`}>
       <h1 className={styles.navTitle}>Bem-vindo ao meu Portfólio</h1>
       <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <a href="#sobre" className={styles.navLink}>Sobre</a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#habilidades" className={styles.navLink}>Habilidades</a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#projetos" className={styles.navLink}>Projetos</a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#contatos" className={styles.navLink}>Contatos</a>
-        </li>
+        {[
+          { href: "#sobre", label: "Sobre" },
+          { href: "#habilidades", label: "Habilidades" },
+          { href: "#projetos", label: "Projetos" },
+          { href: "#contatos", label: "Contatos" },
+        ].map((item) => (
+          <li key={item.href} className={styles.navItem}>
+            <a href={item.href} className={styles.navLink} onClick={toggleNavbar}>
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
