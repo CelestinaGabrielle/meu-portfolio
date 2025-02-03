@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           <button className={styles.menuIcon} onClick={toggleNavbar}>
             <img src={isNavbarOpen ? closeIcon : menuIcon} alt="Menu Icon" />
           </button>
-          <h1>Portfólio</h1>
+          <h1 className={styles.h1}>Portfólio</h1>
           <div className={styles.toggleSwitch}>
             <input type="checkbox" id="switch" defaultChecked />
             <label htmlFor="switch"></label>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css"
+import styles from "./Skills.module.css";
 
 const skills = [
   "HTML",
@@ -14,11 +14,13 @@ const skills = [
 
 const Skills: React.FC = () => {
   return (
-    <section className="skills">
-      <h2>Habilidades</h2>
-      <ul>
+    <section className={styles.skills}>
+      <h2 className={styles.title}>Habilidades</h2>
+      <ul className={styles.list}>
         {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
+          <li key={index} className={styles.item}>
+            {skill}
+          </li>
         ))}
       </ul>
     </section>

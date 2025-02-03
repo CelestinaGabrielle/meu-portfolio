@@ -1,0 +1,78 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+  background-color: #0a0a0a; 
+}
+
+.containerAbout {
+  max-width: 50%;
+  text-align: left;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+}
+
+h1 span {
+  color: #a259ff;
+}
+
+p {
+  font-size: 1.5em;
+  color: #999;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin-right: 10px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnPrimary {
+  background: #a259ff;
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  background: #8730d8;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #a259ff;
+}
+
+.btnSecondary:hover {
+  background: #a259ff;
+}
+
+.imgContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #4c00ff, #a259ff);
+  border-radius: 50% 20% 50% 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -4,12 +4,14 @@ import Header from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import About from "./components/About/About";
+import Banner from "./components/Banner/Banner";
+import About from "./components/AboutMe/About";
 
 const App: React.FC = () => {
   return (
     <div className="app">
-      <Header /> 
+      <Header />
+      <Banner />
       <About />
       <Skills />
       <Projects />
