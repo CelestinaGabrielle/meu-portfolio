@@ -4,13 +4,17 @@ import minhaFoto from "../../images/profile-pic.png";
 
 const Banner: React.FC = () => {
   return (
-    <section className={styles.about}>
-      <div className={styles.containerAbout}>
-        <h1>Olá, eu sou</h1>
-        <h1>
-          <span>Gabrielle Celestina :)</span>
-        </h1>
-        <p>Desenvolvedora Front-End</p>
+    <section className={styles.banner}>
+      <div className={styles.containerbanner}>
+        
+        <div className={styles.description}>
+          <h1>Olá, eu sou</h1>
+          <h1>
+            <span>Gabrielle Celestina :)</span>
+          </h1>
+          <p>Desenvolvedora Front-End</p>
+        </div>
+
         <div className={styles.buttons}>
           <button className={`${styles.btn} ${styles.btnPrimary}`}>
             Download CV
