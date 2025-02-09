@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import Navbar from "../Navbar/Navbar";
-import menuIcon from "../../images/menuIcon.svg";
-import closeIcon from "../../images/closeIcon.svg";
+import menuIcon from "/images/menuIcon.svg";
+import closeIcon from "/images/closeIcon.svg";
 
 const Header: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);

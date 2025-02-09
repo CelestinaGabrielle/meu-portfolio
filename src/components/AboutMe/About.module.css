@@ -1,15 +1,44 @@
 .aboutText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 10%;
-    background-color: #0a0a0a; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20%;
+  background-color: #0a0a0a;
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: opacity 2s ease, transform 2s ease; 
+}
+
+.aboutText.animate {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.aboutText h1 {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.aboutText p {
+  line-height: 2.5;
+  font-size: 1em;
+  color: #999;
+}
+
+/* Responsividade para telas menores (celulares) */
+@media (max-width: 768px) {
+  .aboutText {
+    padding: 30px 10%;
   }
-  
+
+  .aboutText h1 {
+    font-size: 1.8em;
+  }
+
   .aboutText p {
-    font-size: 1.5em;
-    color: #999;
+    font-size: 0.95em;
+    line-height: 2;
   }
-  
+}

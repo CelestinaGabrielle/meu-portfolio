@@ -1,34 +1,61 @@
 .skills {
-  background: #e7dbf8;
-  padding: 40px;
   text-align: center;
+  padding: 50px;
+  background-color: #0a0a0a;
 }
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #1a1a2e;
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px); /* Começa com o título fora da tela */
+  transition: opacity 1s, transform 1s; /* A transição agora é mais lenta */
+}
+
+.title.animate {
+  opacity: 1;
+  transform: translateY(0); /* A animação move o título para sua posição normal */
 }
 
 .list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 3.0em;
   justify-content: center;
-  gap: 20px;
+  list-style: none;
 }
 
 .item {
-  background-color: #e94560;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 25px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: transform 0.3s ease;
+  background: #111;
+  padding: 20px;
+  border-radius: 0px 15px 0px 15px;
+  text-align: center;
+  color: #a259ff;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.item.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s, transform 1s; /* A transição dos itens também é mais lenta */
 }
 
 .item:hover {
-  transform: scale(1.05);
+  background: #222;
+}
+
+.icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1em;
+  color: #fff;
 }
