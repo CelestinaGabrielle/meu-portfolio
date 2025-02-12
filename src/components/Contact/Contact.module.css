@@ -1,0 +1,32 @@
+.contact {
+  background-color: #0a0a0a; /* Cor de fundo */
+  padding: 20px;
+  color: #ffffff; /* Cor do texto */
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #a259ff; /* Cor do título */
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact a {
+  color: #a259ff; /* Cor dos links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #ffffff; /* Cor dos links ao passar o mouse */
+}

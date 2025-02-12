@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 
 const AboutMe: React.FC = () => {
   const { ref, inView } = useInView({
-    threshold: 0.7, 
+    threshold: 0.6, 
   });
 
   return (

@@ -70,7 +70,7 @@
 .projectCard p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #ccc;
+  color: #999;
 }
 
 .projectCard a {
@@ -81,6 +81,5 @@
 }
 
 .projectCard a:hover {
-  background-color: #310644;
   color: #fff;
 }

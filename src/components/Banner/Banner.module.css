@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10% 10%;
-  background-color: #0a0a0a; 
+  background-color: #0a0a0a; /* Cor de fundo */
 }
 
 .containerbanner {
@@ -18,16 +18,16 @@
 h1 {
   font-size: 2.7em;
   font-weight: bold;
-  color: #fff;
+  color: #fff; /* Cor do texto principal */
 }
 
 h1 span {
-  color: #a259ff;
+  color: #a259ff; /* Cor do destaque no título */
 }
 
 p {
   font-size: 1.3em;
-  color: #999;
+  color: #999; /* Cor do texto secundário */
 }
 
 .buttons {
@@ -45,29 +45,29 @@ p {
 }
 
 .btnPrimary {
-  background: #a259ff;
+  background: #a259ff; /* Cor do botão primário */
   color: #fff;
 }
 
 .btnPrimary:hover {
-  background: #792cc2;
+  background: #792cc2; /* Cor do botão primário ao passar o mouse */
 }
 
 .btnSecondary {
   background: transparent;
   color: #fff;
-  border: 2px solid #a259ff;
+  border: 2px solid #a259ff; /* Cor da borda do botão secundário */
 }
 
 .btnSecondary:hover {
-  background: #a259ff;
+  background: #a259ff; /* Cor do botão secundário ao passar o mouse */
 }
 
 .imgContainer {
   position: relative;
   width: 300px;
   height: 300px;
-  background: linear-gradient(155deg, #3b04bb, #9144f5);
+  background: linear-gradient(155deg, #3b04bb, #9144f5); /* Gradiente com tons de roxo */
   border-radius: 50% 20% 50% 20%;
   display: flex;
   justify-content: center;

@@ -1,15 +1,26 @@
 .header {
   position: sticky;
-  top: 0; 
+  top: 0;
   width: 100%;
   color: #fff;
   background-color: #310644;
-  z-index: 100; 
+  z-index: 1000; /* Aumentamos o z-index para garantir que o header fique acima do overlay */
 }
 
-.h1{
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999; /* O overlay fica abaixo do header */
+}
+.h1 {
   font-size: 1.5rem;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -25,11 +36,7 @@
 }
 
 .menuIcon:hover {
-  transform: scale(0.8); 
-}
-
-h1 {
-  font-size: 1.5rem;
+  transform: scale(0.8);
 }
 
 .toggleSwitch {
@@ -72,4 +79,16 @@ h1 {
 
 .toggleSwitch input:checked + label:before {
   transform: translateX(25px);
+}
+
+/* Overlay com blur */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 99;
 }

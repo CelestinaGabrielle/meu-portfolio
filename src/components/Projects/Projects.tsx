@@ -1,6 +1,6 @@
 import React from "react";
-import { useInView } from "react-intersection-observer"; // Importando o hook
-import styles from "./Projects.module.css"; // Importando o módulo CSS
+import { useInView } from "react-intersection-observer"; 
+import styles from "./Projects.module.css"; 
 
 interface Project {
   title: string;
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.5,
   });
 
   return (

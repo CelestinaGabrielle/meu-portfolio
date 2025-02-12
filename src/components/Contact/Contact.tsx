@@ -1,9 +1,9 @@
 import React from "react";
-import "./Contact.css"
+import styles from "./Contact.module.css"; // Importando o CSS Module
 
 const Contact: React.FC = () => {
   return (
-    <section className="contact">
+    <section className={styles.contact}>
       <h2>Contato</h2>
       <p>Você pode me encontrar nas redes sociais ou enviar um e-mail:</p>
       <ul>
