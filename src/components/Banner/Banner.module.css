@@ -2,8 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10% 10%;
-  background-color: #0a0a0a; /* Cor de fundo */
+  padding: 8% 10%;
+  background-color: var(--rosa-escuro);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .containerbanner {
@@ -12,66 +14,72 @@
 }
 
 .description {
-  line-height: 0.7;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 2.7em;
   font-weight: bold;
-  color: #fff; /* Cor do texto principal */
+  color: var(--rosa-claro);
 }
 
 h1 span {
-  color: #a259ff; /* Cor do destaque no título */
+  color: var(--rosa-vibrante);
 }
 
 p {
-  font-size: 1.3em;
-  color: #999; /* Cor do texto secundário */
+  font-size: 1.2em;
+  color: var(--rosa-suave);
 }
 
 .buttons {
-  margin-top: 50px;
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
 }
 
 .btn {
-  padding: 12px 24px;
-  margin-right: 15px;
+  padding: 14px 28px;
   font-size: 1.1em;
+  font-weight: 500;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .btnPrimary {
-  background: #a259ff; /* Cor do botão primário */
-  color: #fff;
+  background: var(--rosa-vibrante);
+  color: var(--fundo-claro);
+  box-shadow: 0 4px 10px rgba(255, 79, 135, 0.4);
 }
 
 .btnPrimary:hover {
-  background: #792cc2; /* Cor do botão primário ao passar o mouse */
+  background: var(--rosa-destaque);
 }
 
 .btnSecondary {
   background: transparent;
-  color: #fff;
-  border: 2px solid #a259ff; /* Cor da borda do botão secundário */
+  color: var(--fundo-claro);
+  border: 2px solid var(--rosa-vibrante);
+  transition: all 0.3s ease-in-out;
 }
 
 .btnSecondary:hover {
-  background: #a259ff; /* Cor do botão secundário ao passar o mouse */
+  background: var(--rosa-vibrante);
+  color: var(--fundo-claro);
 }
 
 .imgContainer {
   position: relative;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(155deg, #3b04bb, #9144f5); /* Gradiente com tons de roxo */
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(155deg, var(--rosa-vibrante), var(--rosa-escuro));
   border-radius: 50% 20% 50% 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .foto {
@@ -81,13 +89,13 @@ p {
   object-fit: cover;
 }
 
-/* Responsividade para telas menores (celulares) */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 5% 5%;
+    padding: 6% 5%;
   }
 
   .containerbanner {
@@ -96,7 +104,7 @@ p {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   p {
@@ -105,19 +113,17 @@ p {
 
   .buttons {
     margin-top: 30px;
-    display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
   .btn {
     width: 100%;
-    margin-right: 0;
   }
 
   .imgContainer {
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
     margin-top: 30px;
   }
 }

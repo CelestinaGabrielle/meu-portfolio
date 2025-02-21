@@ -1,21 +1,21 @@
 .skills {
   text-align: center;
   padding: 50px;
-  background-color: #0a0a0a;
+  background-color: var(--fundo-escuro);
 }
 
 .title {
   font-size: 2em;
-  color: #fff;
+  color: var(--fundo-claro);
   margin-bottom: 50px;
   opacity: 0;
-  transform: translateY(50px); /* Começa com o título fora da tela */
-  transition: opacity 1s, transform 1s; /* A transição agora é mais lenta */
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
 }
 
 .title.animate {
   opacity: 1;
-  transform: translateY(0); /* A animação move o título para sua posição normal */
+  transform: translateY(0);
 }
 
 .list {
@@ -31,7 +31,7 @@
   padding: 20px;
   border-radius: 0px 15px 0px 15px;
   text-align: center;
-  color: #a259ff;
+  color: var(--rosa-vibrante);
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 .item.animate {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 1s, transform 1s; /* A transição dos itens também é mais lenta */
+  transition: opacity 1s, transform 1s;
 }
 
 .item:hover {
@@ -57,5 +57,5 @@
 
 .name {
   font-size: 1em;
-  color: #fff;
+  color: var(--fundo-claro);
 }

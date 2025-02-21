@@ -1,11 +1,11 @@
 .projects {
-  background-color: #0a0a0a;
+  background-color: var(--fundo-escuro);
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .projects h2 {
-  color: #fff;
+  color: var(--fundo-claro);
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -29,7 +29,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(50px);
-  color: #fff;
+  color: var(--fundo-claro);
 }
 
 .projectCard.animate {
@@ -64,7 +64,7 @@
 .projectCard h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #8d4de0;
+  color: var(--rosa-vibrante);
 }
 
 .projectCard p {
@@ -74,12 +74,12 @@
 }
 
 .projectCard a {
-  color: #af81eb;
+  color: var(--rosa-suave);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .projectCard a:hover {
-  color: #fff;
+  color: var(--fundo-claro);
 }
