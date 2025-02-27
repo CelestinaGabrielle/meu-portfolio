@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useInView } from "react-intersection-observer";
 
@@ -30,11 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
           { href: "/Contact", label: "Contatos" },
         ].map((item) => (
           <li key={item.href} className={styles.navItem}>
-            <Link
-              href={item.href}
-              className={styles.navLink}
-              onClick={toggleNavbar}
-            >
+            <Link to={item.href} className={styles.navLink} onClick={toggleNavbar}>
               {item.label}
             </Link>
           </li>

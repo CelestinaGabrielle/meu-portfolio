@@ -1,17 +1,24 @@
 .contact {
-  background-color: var(--rosa-escuro);
-  padding: 40px 20px;
+  background-color: var(--rosa-escuro); 
+  padding: 60px 20px;
   color: var(--fundo-claro);
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
-  color: var(--rosa-vibrante);
-  text-shadow: 2px 2px 6px rgba(255, 79, 135, 0.3);
+  font-size: 2.8em; 
+  margin-bottom: 90px;
+  color: var(--rosa-claro);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact h2.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact ul {
@@ -19,8 +26,10 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px; /* Aumentei o gap para melhor espaçamento */
   flex-wrap: wrap;
+  max-width: 800px; /* Limita a largura para melhor organização */
+  margin: 0 auto; /* Centraliza a lista */
 }
 
 .contact a {
@@ -29,32 +38,43 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 12px 20px; /* Aumentei o padding para melhorar a área de clique */
+  border-radius: 25px; /* Bordas mais arredondadas */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre ícone e texto */
 }
 
 .contact a:hover {
   color: var(--fundo-claro);
-  background-color: var(--rosa-vibrante);
+  background-color: var(--rosa-vibrante); /* Alinhado com o banner */
   box-shadow: 0 4px 10px rgba(255, 79, 135, 0.4);
+  transform: translateY(-5px); /* Efeito de levitação */
+}
+
+/* Ícones (se necessário) */
+.contact a i {
+  font-size: 1.5rem; /* Tamanho do ícone */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .contact {
-    padding: 30px 10px;
+    padding: 40px 10px; /* Reduzi o padding para telas menores */
   }
 
   .contact h2 {
-    font-size: 2rem;
+    font-size: 2.2em; /* Tamanho menor para telas pequenas */
   }
 
   .contact ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Ajustei o gap para telas menores */
   }
 
   .contact a {
-    font-size: 1rem;
+    font-size: 1rem; /* Tamanho menor para telas pequenas */
+    padding: 10px 15px; /* Ajustei o padding */
   }
 }

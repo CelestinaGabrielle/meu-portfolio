@@ -1,15 +1,24 @@
 .projects {
-  background-color: var(--fundo-escuro);
-  padding: 4rem 2rem;
+  background-color: var(--rosa-escuro);
+  padding: 60px 20px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .projects h2 {
-  color: var(--fundo-claro);
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  color: var(--rosa-claro);
+  font-size: 2.8em;
+  margin-bottom: 90px;
+  transform: translateY(50px); 
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: opacity 1s ease-out, transform 1s ease-out; 
 }
 
+.projects h2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 .projectsList {
   display: flex;
   flex-wrap: wrap;
@@ -17,16 +26,17 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .projectCard {
-  background: #1a1a1a;
-  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
   border-radius: 15px;
   text-align: center;
   width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   transform: translateY(50px);
   color: var(--fundo-claro);
@@ -47,7 +57,7 @@
   height: 200px;
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .image {
@@ -58,23 +68,23 @@
 }
 
 .projectCard:hover .image {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .projectCard h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
   color: var(--rosa-vibrante);
 }
 
 .projectCard p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #999;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--rosa-suave);
 }
 
 .projectCard a {
-  color: var(--rosa-suave);
+  color: var(--rosa-vibrante);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -82,4 +92,33 @@
 
 .projectCard a:hover {
   color: var(--fundo-claro);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 10px;
+  }
+
+  .projects h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+  }
+
+  .projectCard {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .imageContainer {
+    height: 180px;
+  }
+
+  .projectCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .projectCard p {
+    font-size: 1rem;
+  }
 }

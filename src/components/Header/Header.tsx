@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Navbar from "../Navbar/Navbar";
-import menuIcon from "/images/menuIcon.svg";
-import closeIcon from "/images/closeIcon.svg";
+import menuIcon from "../../assets/images/menuIcon.svg";
+import closeIcon from "../../assets/images/closeIcon.svg";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 const Header: React.FC = () => {
@@ -12,15 +12,13 @@ const Header: React.FC = () => {
     setIsNavbarOpen((prev) => !prev);
   };
 
-  // Efeito para travar/destravar a rolagem da página
   useEffect(() => {
     if (isNavbarOpen) {
-      disableBodyScroll(document.body); // Trava a rolagem
+      disableBodyScroll(document.body); 
     } else {
-      enableBodyScroll(document.body); // Libera a rolagem
+      enableBodyScroll(document.body);
     }
 
-    // Limpa o efeito ao desmontar o componente
     return () => {
       enableBodyScroll(document.body);
     };

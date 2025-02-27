@@ -1,25 +1,129 @@
 :root {
-  --rosa-escuro: #8b2f5f;
-  --rosa-claro: #e492a5;
-  --rosa-vibrante: #ff4f87;
-  --rosa-suave: #d897a0;
-  --rosa-neutro: #b68ba6;
-  --rosa-destaque: #e03b72;
-  --fundo-escuro: #8b2f5f;
-  --fundo-claro: #ffffff;
+  --rosa-escuro: #8A4F7D; /* Rosa escuro sofisticado */
+  --rosa-claro: #FFB6C1; /* Rosa claro e suave */
+  --rosa-vibrante: #FF69B4; /* Rosa vibrante e chamativo */
+  --rosa-suave: #FFD1DC; /* Rosa pastel para textos */
+  --rosa-neutro: #D8A1B3; /* Rosa neutro para elementos secundários */
+  --rosa-destaque: #FF1493; /* Rosa intenso para destaques e hovers */
+  --fundo-escuro: #6A2C4E; /* Fundo escuro para contraste */
+  --fundo-claro: #FFF0F5; /* Fundo claro para áreas principais */
 }
 
 /* Estilos gerais */
 body {
-  background-color: var(--fundo-escuro);
+ background-color: var(--rosa-escuro);
   color: var(--rosa-suave);
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6; /* Melhora a legibilidade do texto */
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Links globais */
+a {
+  color: var(--rosa-vibrante);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--rosa-destaque);
+}
+
+/* Botões globais */
+button {
+  background-color: var(--rosa-vibrante);
+  color: var(--fundo-claro);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--rosa-destaque);
+  transform: translateY(-2px); /* Efeito de levitação */
+}
+
+/* Títulos globais */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--rosa-claro);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+/* Parágrafos globais */
+p {
+  font-size: 1.1em;
+  color: var(--rosa-suave);
+  margin-bottom: 1.5rem;
+}
+
+/* Listas globais */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style-type: none; /* Remove marcadores padrão */
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Formulários globais */
+input, textarea, select {
+  background-color: var(--fundo-claro);
+  color: var(--rosa-escuro);
+  border: 1px solid var(--rosa-neutro);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--rosa-vibrante);
+  outline: none;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }

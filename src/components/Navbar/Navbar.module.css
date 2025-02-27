@@ -1,17 +1,18 @@
 .navbar {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(223, 10, 212, 0.781);
+  background-color: rgba(182, 139, 166, 0.267); /* --rosa-neutro com transparência */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 100;
+  backdrop-filter: blur(5px); /* Efeito de blur para o fundo */
 }
 
 .navbar.open {
@@ -22,16 +23,12 @@
   transform: translateX(-100%);
 }
 
-.navbar.visible {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
 .navTitle {
   color: var(--rosa-suave);
-  font-size: 40px;
+  font-size: 2.5rem; /* Reduzi o tamanho para ficar mais equilibrado */
   margin: 0;
-  padding: 1.5rem 0 4.5rem 0;
+  padding: 1.5rem 0 2.5rem 0; /* Ajustei o padding */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 .navList {
@@ -41,26 +38,29 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem 0 3rem 0;
+  margin: 0;
 }
 
 .navLink {
   color: var(--fundo-claro);
   text-decoration: none;
-  font-size: 40px;
-  transition: color 0.3s ease;
+  font-size: 2rem; /* Reduzi o tamanho para melhorar a legibilidade */
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 1rem; /* Adicionei padding para melhorar a área de clique */
 }
 
 .navLink:hover {
   color: var(--rosa-vibrante);
+  transform: translateX(10px); /* Efeito de movimento ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .navTitle {
-    font-size: 30px;
+    font-size: 2rem; /* Tamanho menor para telas pequenas */
   }
 
   .navLink {
-    font-size: 30px;
+    font-size: 1.5rem; /* Tamanho menor para telas pequenas */
   }
 }

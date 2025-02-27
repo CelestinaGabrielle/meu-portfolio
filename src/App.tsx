@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./styles/global.css";
 import Header from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
@@ -10,12 +11,14 @@ import About from "./components/AboutMe";
 const App: React.FC = () => {
   return (
     <div className="app">
-      <Header />
-      <Banner />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <BrowserRouter>
+        <Header />
+        <Banner />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </BrowserRouter>
     </div>
   );
 };

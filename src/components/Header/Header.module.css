@@ -3,18 +3,19 @@
   top: 0;
   width: 100%;
   color: var(--fundo-claro);
-  background-color: var(--rosa-escuro);
+  background-color: var(--rosa-escuro); /* Alinhado com o banner */
   z-index: 1000;
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Aumentei o tamanho para ficar mais impactante */
   font-weight: bold;
-  color: var(--rosa-vibrante);
+  color: var(--rosa-claro); /* Alinhado com o banner */
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px; /* Aumentei o espaçamento */
+  text-shadow: 2px 2px 6px rgba(255, 79, 135, 0.3); /* Sombra suave */
 }
 
 /* Container com espaçamento */
@@ -22,8 +23,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
-  gap: 50px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limita a largura para telas grandes */
+  padding: 0 20px;
+  gap: 20px; /* Reduzi o gap para melhorar o espaçamento */
 }
 
 /* Ícone do Menu */
@@ -32,10 +35,12 @@
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  color: var(--rosa-claro); /* Alinhado com o banner */
 }
 
 .menuIcon:hover {
   transform: scale(1.1);
+  color: var(--rosa-vibrante); /* Efeito hover alinhado com o banner */
 }
 
 /* Switch estilizado */
@@ -43,6 +48,7 @@
   position: relative;
   width: 50px;
   height: 25px;
+  margin-left: auto; /* Garante que o switch fique alinhado à direita */
 }
 
 .toggleSwitch input {
@@ -68,13 +74,13 @@
   height: 20px;
   left: 3px;
   bottom: 3px;
-  background-color: var(--rosa-escuro);
+  background-color: var(--fundo-claro); /* Alinhado com o banner */
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
 .toggleSwitch input:checked + label {
-  background-color: var(--rosa-vibrante);
+  background-color: var(--rosa-vibrante); /* Alinhado com o banner */
 }
 
 .toggleSwitch input:checked + label:before {
