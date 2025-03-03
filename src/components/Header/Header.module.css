@@ -2,20 +2,21 @@
   position: sticky;
   top: 0;
   width: 100%;
-  color: var(--fundo-claro);
-  background-color: var(--rosa-escuro); /* Alinhado com o banner */
+  color: var(--texto-principal); /* Texto branco */
+  background-color: var(--fundo-secundario); /* Fundo secundário escuro */
   z-index: 1000;
   padding: 15px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .h1 {
-  font-size: 1.8rem; /* Aumentei o tamanho para ficar mais impactante */
+  font-size: 1.8rem; /* Tamanho mantido */
   font-weight: bold;
-  color: var(--rosa-claro); /* Alinhado com o banner */
+  color: var(--destaque-roxo); /* Roxo claro para destaque */
   text-transform: uppercase;
-  letter-spacing: 1.5px; /* Aumentei o espaçamento */
-  text-shadow: 2px 2px 6px rgba(255, 79, 135, 0.3); /* Sombra suave */
+  letter-spacing: 1.5px; /* Espaçamento mantido */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
+  margin: 0; /* Remove margens padrão */
 }
 
 /* Container com espaçamento */
@@ -24,9 +25,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 1200px; /* Limita a largura para telas grandes */
+  max-width: 1200px; /* Largura máxima mantida */
   padding: 0 20px;
-  gap: 20px; /* Reduzi o gap para melhorar o espaçamento */
+  gap: 20px; /* Espaçamento mantido */
 }
 
 /* Ícone do Menu */
@@ -35,12 +36,13 @@
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-  color: var(--rosa-claro); /* Alinhado com o banner */
+  color: var(--destaque-roxo); /* Roxo claro para ícone */
+  font-size: 1.8rem; /* Tamanho do ícone */
 }
 
 .menuIcon:hover {
   transform: scale(1.1);
-  color: var(--rosa-vibrante); /* Efeito hover alinhado com o banner */
+  color: var(--destaque-roxo-hover); /* Roxo mais escuro no hover */
 }
 
 /* Switch estilizado */
@@ -48,7 +50,7 @@
   position: relative;
   width: 50px;
   height: 25px;
-  margin-left: auto; /* Garante que o switch fique alinhado à direita */
+  margin-left: auto; /* Alinhado à direita */
 }
 
 .toggleSwitch input {
@@ -62,7 +64,7 @@
   cursor: pointer;
   width: 100%;
   height: 100%;
-  background-color: var(--rosa-neutro);
+  background-color: var(--borda); /* Cinza escuro para o fundo do switch */
   border-radius: 25px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -74,13 +76,13 @@
   height: 20px;
   left: 3px;
   bottom: 3px;
-  background-color: var(--fundo-claro); /* Alinhado com o banner */
+  background-color: var(--texto-principal); /* Bolinha branca */
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
 .toggleSwitch input:checked + label {
-  background-color: var(--rosa-vibrante); /* Alinhado com o banner */
+  background-color: var(--destaque-roxo); /* Roxo claro quando ativo */
 }
 
 .toggleSwitch input:checked + label:before {
@@ -97,4 +99,27 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   z-index: 99;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px; /* Padding reduzido para telas menores */
+  }
+
+  .h1 {
+    font-size: 1.5rem; /* Tamanho menor para telas pequenas */
+  }
+
+  .menuIcon {
+    display: block; /* Mostra o ícone do menu em telas menores */
+  }
+
+  .container {
+    padding: 0 10px; /* Padding reduzido */
+    gap: 10px; /* Espaçamento reduzido */
+  }
+
+  .toggleSwitch {
+    margin-left: 0; /* Alinhamento ajustado */
+  }
 }

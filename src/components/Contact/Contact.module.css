@@ -1,17 +1,17 @@
 .contact {
-  background-color: var(--rosa-escuro); 
+  background-color: var(--fundo-secundario); /* Fundo escuro secundário */
   padding: 60px 20px;
-  color: var(--fundo-claro);
+  color: var(--texto-principal); /* Texto branco para contraste */
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 .contact h2 {
-  font-size: 2.8em; 
+  font-size: 2.8em;
   margin-bottom: 90px;
-  color: var(--rosa-claro);
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  color: var(--destaque-roxo); /* Roxo claro para destaque */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -26,20 +26,20 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 30px; /* Aumentei o gap para melhor espaçamento */
+  gap: 30px; /* Espaçamento entre os itens */
   flex-wrap: wrap;
-  max-width: 800px; /* Limita a largura para melhor organização */
+  max-width: 800px; /* Largura máxima */
   margin: 0 auto; /* Centraliza a lista */
 }
 
 .contact a {
-  color: var(--rosa-suave);
+  color: var(--texto-secundario); /* Texto secundário (cinza claro) */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
   transition: all 0.3s ease-in-out;
-  padding: 12px 20px; /* Aumentei o padding para melhorar a área de clique */
-  border-radius: 25px; /* Bordas mais arredondadas */
+  padding: 12px 20px; /* Padding para área de clique */
+  border-radius: 25px; /* Bordas arredondadas */
   background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
   display: flex;
   align-items: center;
@@ -47,9 +47,9 @@
 }
 
 .contact a:hover {
-  color: var(--fundo-claro);
-  background-color: var(--rosa-vibrante); /* Alinhado com o banner */
-  box-shadow: 0 4px 10px rgba(255, 79, 135, 0.4);
+  color: var(--texto-principal); /* Texto branco no hover */
+  background-color: var(--destaque-roxo); /* Roxo claro no hover */
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4); /* Sombra suave em roxo */
   transform: translateY(-5px); /* Efeito de levitação */
 }
 
@@ -61,7 +61,7 @@
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .contact {
-    padding: 40px 10px; /* Reduzi o padding para telas menores */
+    padding: 40px 10px; /* Padding reduzido para telas menores */
   }
 
   .contact h2 {
@@ -70,11 +70,11 @@
 
   .contact ul {
     flex-direction: column;
-    gap: 20px; /* Ajustei o gap para telas menores */
+    gap: 20px; /* Espaçamento reduzido */
   }
 
   .contact a {
     font-size: 1rem; /* Tamanho menor para telas pequenas */
-    padding: 10px 15px; /* Ajustei o padding */
+    padding: 10px 15px; /* Padding ajustado */
   }
 }

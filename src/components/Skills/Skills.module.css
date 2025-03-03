@@ -1,18 +1,18 @@
 .skills {
   text-align: center;
-  padding: 60px 20px; 
-  background-color: var(--rosa-escuro); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  padding: 60px 20px;
+  background-color: var(--fundo-secundario); /* Fundo escuro secundário */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 .title {
-  font-size: 2.5em; /* Aumentei o tamanho para mais impacto */
-  color: var(--rosa-claro); /* Alinhado com o banner */
-  margin-bottom: 40px; /* Ajustei o espaçamento */
+  font-size: 2.5em; /* Tamanho mantido para impacto */
+  color: var(--destaque-roxo); /* Roxo claro para destaque */
+  margin-bottom: 40px; /* Espaçamento mantido */
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
 }
 
 .title.animate {
@@ -22,13 +22,13 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Aumentei o tamanho mínimo */
-  gap: 2em; /* Reduzi o gap para melhorar o espaçamento */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas responsivas */
+  gap: 2em; /* Espaçamento entre os itens */
   justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 1200px; /* Limita a largura para telas grandes */
+  max-width: 1200px; /* Largura máxima */
 }
 
 .item {
@@ -36,7 +36,7 @@
   padding: 20px;
   border-radius: 12px; /* Bordas arredondadas */
   text-align: center;
-  color: var(--rosa-vibrante);
+  color: var(--destaque-roxo); /* Roxo claro para texto */
   transition: all 0.3s ease-in-out; /* Transição suave */
   display: flex;
   flex-direction: column;
@@ -59,21 +59,21 @@
 }
 
 .icon {
-  font-size: 3em; /* Aumentei o tamanho do ícone */
-  margin-bottom: 15px; /* Ajustei o espaçamento */
-  color: var(--rosa-vibrante); /* Alinhado com o banner */
+  font-size: 3em; /* Tamanho do ícone mantido */
+  margin-bottom: 15px; /* Espaçamento mantido */
+  color: var(--destaque-roxo); /* Roxo claro para ícones */
 }
 
 .name {
-  font-size: 1.1em; /* Aumentei o tamanho da fonte */
-  color: var(--fundo-claro);
-  font-weight: 500; /* Deixei o texto um pouco mais forte */
+  font-size: 1.1em; /* Tamanho da fonte mantido */
+  color: var(--texto-principal); /* Texto branco para contraste */
+  font-weight: 500; /* Peso da fonte mantido */
 }
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .skills {
-    padding: 40px 10px; /* Reduzi o padding para telas menores */
+    padding: 40px 10px; /* Padding reduzido para telas menores */
   }
 
   .title {
@@ -83,11 +83,11 @@
 
   .list {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colunas menores */
-    gap: 1.5em; /* Reduzi o gap */
+    gap: 1.5em; /* Espaçamento reduzido */
   }
 
   .item {
-    padding: 15px; /* Reduzi o padding */
+    padding: 15px; /* Padding reduzido */
   }
 
   .icon {

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8% 10%;
-  background-color: var(--rosa-escuro);
+  background-color: var(--fundo-secundario); /* Fundo escuro secundário */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -20,18 +20,18 @@
 h1 {
   font-size: 2.7em;
   font-weight: bold;
-  color: var(--rosa-claro);
-  text-shadow: 2px 2px 6px rgba(255, 79, 135, 0.3);
+  color: var(--destaque-roxo); /* Roxo claro para destaque */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
 }
 
 h1 span {
-  color: var(--rosa-vibrante);
-  text-shadow: 2px 2px 6px rgba(255, 79, 135, 0.3);
+  color: var(--destaque-roxo-hover); /* Roxo mais escuro para destaque */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
 }
 
 p {
   font-size: 1.2em;
-  color: var(--rosa-suave);
+  color: var(--texto-secundario); /* Texto secundário (cinza claro) */
 }
 
 .buttons {
@@ -51,32 +51,32 @@ p {
 }
 
 .btnPrimary {
-  background: var(--rosa-vibrante);
-  color: var(--fundo-claro);
-  box-shadow: 0 4px 10px rgba(255, 79, 135, 0.4);
+  background: var(--destaque-roxo); /* Roxo claro para botão primário */
+  color: var(--fundo-escuro); /* Texto escuro para contraste */
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4); /* Sombra suave em roxo */
 }
 
 .btnPrimary:hover {
-  background: var(--rosa-destaque);
+  background: var(--destaque-roxo-hover); /* Roxo mais escuro no hover */
 }
 
 .btnSecondary {
   background: transparent;
-  color: var(--fundo-claro);
-  border: 2px solid var(--rosa-vibrante);
+  color: var(--destaque-roxo); /* Roxo claro para texto */
+  border: 2px solid var(--destaque-roxo); /* Borda roxa */
   transition: all 0.3s ease-in-out;
 }
 
 .btnSecondary:hover {
-  background: var(--rosa-vibrante);
-  color: var(--fundo-claro);
+  background: var(--destaque-roxo); /* Fundo roxo no hover */
+  color: var(--fundo-escuro); /* Texto escuro para contraste */
 }
 
 .imgContainer {
   position: relative;
   width: 320px;
   height: 320px;
-  background: linear-gradient(155deg, var(--rosa-vibrante), var(--rosa-escuro));
+  background: linear-gradient(155deg, var(--destaque-roxo), var(--fundo-secundario)); /* Gradiente roxo e escuro */
   border-radius: 50% 20% 50% 20%;
   display: flex;
   justify-content: center;
