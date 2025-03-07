@@ -10,8 +10,8 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Anima apenas uma vez
-    threshold: 0.2, // Define quando a animação deve ser acionada
+    triggerOnce: true, 
+    threshold: 0.2, 
   });
 
   return (
@@ -24,7 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
       <h1 className={styles.navTitle}>Bem-vindo ao meu Portfólio</h1>
       <ul className={styles.navList}>
         {[
-          { href: "/About", label: "Sobre" },
+          { href: "/AboutMe", label: "Sobre" },
           { href: "/Skills", label: "Habilidades" },
           { href: "/Projects", label: "Projetos" },
           { href: "/Contact", label: "Contatos" },

@@ -3,10 +3,23 @@ import styles from "./Banner.module.css";
 import minhaFoto from "../../assets/images/profile-pic.png";
 
 const Banner: React.FC = () => {
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/../../../public/Curriculo Gabrielle - 2025.pdf"; // Caminho do arquivo PDF na pasta public
+    link.download = "Curriculo Gabrielle - 2025.pdf";
+    link.click();
+  };
+
+  const goToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className={styles.banner}>
       <div className={styles.containerbanner}>
-        
         <div className={styles.description}>
           <h1>Olá, eu sou</h1>
           <h1>
@@ -16,10 +29,16 @@ const Banner: React.FC = () => {
         </div>
 
         <div className={styles.buttons}>
-          <button className={`${styles.btn} ${styles.btnPrimary}`}>
+          <button
+            className={`${styles.btn} ${styles.btnPrimary}`}
+            onClick={handleDownloadCV}
+          >
             Download CV
           </button>
-          <button className={`${styles.btn} ${styles.btnSecondary}`}>
+          <button
+            className={`${styles.btn} ${styles.btnSecondary}`}
+            onClick={goToContact}
+          >
             Entrar em contato
           </button>
         </div>
