@@ -5,8 +5,8 @@ import minhaFoto from "../../assets/images/profile-pic.png";
 const Banner: React.FC = () => {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/../../../public/Curriculo Gabrielle - 2025.pdf"; // Caminho do arquivo PDF na pasta public
-    link.download = "Curriculo Gabrielle - 2025.pdf";
+    link.href = "/../../../public/Curriculo_Gabrielle_Celestina.pdf"; // Caminho do arquivo PDF na pasta public
+    link.download = "Curriculo_Gabrielle_Celestina.pdf";
     link.click();
   };
 
