@@ -31,6 +31,8 @@ Siga os passos abaixo para rodar o projeto localmente:
    git clone https://github.com/CelestinaGabrielle/meu-portfolio.git
 2. **Instale as dependências**:
    ```bash
-  npm install
+   npm install
+  
 3. **Inicie o servidor local:**:
-   ```bashnpm run start
+   ```bash
+   npm run start
