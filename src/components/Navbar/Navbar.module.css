@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(182, 139, 166, 0.267); /* --rosa-neutro com transparência */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   z-index: 100;
-  backdrop-filter: blur(5px); /* Efeito de blur para o fundo */
+  backdrop-filter: blur(10px); /* Efeito de blur para o fundo */
 }
 
 .navbar.open {
@@ -24,11 +24,14 @@
 }
 
 .navTitle {
-  color: var(--rosa-suave);
-  font-size: 2.5rem; /* Reduzi o tamanho para ficar mais equilibrado */
+  color: var(--fundo-claro);
+  font-size: 3rem; /* Tamanho maior para destaque */
   margin: 0;
-  padding: 1.5rem 0 2.5rem 0; /* Ajustei o padding */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 2.5rem 0 2rem 0;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+  font-weight: bold;
+  letter-spacing: 2px; /* Espaçamento entre letras para um visual moderno */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
 }
 
 .navList {
@@ -36,7 +39,7 @@
   display: flex;
   text-align: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem; /* Aumenta o espaçamento entre os itens */
   padding: 2rem 0 3rem 0;
   margin: 0;
 }
@@ -44,23 +47,30 @@
 .navLink {
   color: var(--fundo-claro);
   text-decoration: none;
-  font-size: 2rem; /* Reduzi o tamanho para melhorar a legibilidade */
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 0.5rem 1rem; /* Adicionei padding para melhorar a área de clique */
+  font-size: 1.8rem;
+  padding: 0.8rem 2rem; /* Aumenta o padding para melhorar a área de clique */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Borda com transparência */
+  border-radius: 30px; /* Bordas arredondadas para um visual moderno */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo com leve transparência */
+  transition: all 0.3s ease-in-out;
 }
 
 .navLink:hover {
-  color: var(--rosa-vibrante);
-  transform: translateX(10px); /* Efeito de movimento ao passar o mouse */
+  color: var(--destaque-roxo); /* Roxo claro para destaque */
+  background-color: rgba(187, 134, 252, 0.2); /* Fundo com leve roxo */
+  border-color: var(--destaque-roxo); /* Borda muda para a cor de destaque */
+  text-shadow: 2px 2px 6px rgba(187, 134, 252, 0.3); /* Sombra suave em roxo */
+  transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .navTitle {
-    font-size: 2rem; /* Tamanho menor para telas pequenas */
+    font-size: 2.5rem; /* Ajusta o tamanho do título para telas menores */
   }
 
   .navLink {
-    font-size: 1.5rem; /* Tamanho menor para telas pequenas */
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
+    padding: 0.6rem 1.5rem; /* Ajusta o padding para telas menores */
   }
 }

@@ -10,7 +10,7 @@ const AboutMe: React.FC = () => {
   return (
     <div
       ref={ref}
-      className={`${styles.aboutText} ${inView ? styles.animate : ""}`}
+      className={`${styles.aboutText} ${inView ? styles.animate : ""}`} id="about"
     >
       <h1>Sobre mim</h1>
       <p>

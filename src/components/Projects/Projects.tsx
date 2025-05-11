@@ -1,42 +1,46 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./Projects.module.css";
-import imgTestProjects from "../../assets/images/img-test-projects.jpg";
+
+// Importa todas as imagens da pasta assets/images
+const images = import.meta.glob(
+  "../../assets/images/*.{jpg,png}"
+) as Record<string, () => Promise<{ default: string }>>;
 
 interface Project {
   title: string;
   description: string;
   link: string;
-  image?: string;
+  imageName: string; // Nome da imagem correspondente
 }
 
 const projects: Project[] = [
   {
-    title: "Gerenciamento de Tickets",
+    title: "Task-manager",
     description:
-      "Sistema de gerenciamento de tickets para suporte técnico, com painel de controle intuitivo e integração em tempo real.",
-    link: "https://github.com/CelestinaGabrielle/Gerenciamento_Tickets",
-    image: imgTestProjects,
-  },
-  {
-    title: "Blog-Next",
-    description:
-      "Blog moderno desenvolvido com Next.js, otimizado para SEO e com carregamento ultrarrápido de páginas.",
-    link: "https://github.com/CelestinaGabrielle/Blog-Next",
-    image: imgTestProjects,
+      "Aplicação moderna para organizar e acompanhar suas tarefas de forma prática e eficiente.",
+    link: "https://github.com/CelestinaGabrielle/task-manager",
+    imageName: "Task.png",
   },
   {
     title: "Discord com Responsividade",
     description:
       "Clone da interface do Discord com design responsivo, funcionalidades de chat e integração de temas claros e escuros.",
     link: "https://github.com/CelestinaGabrielle/DiscordResponsividade",
-    image: imgTestProjects,
+    imageName: "Discord.png",
+  },
+    {
+    title: "CRUD de usuários",
+    description:
+      "Aplicação CRUD desenvolvida com React para cadastrar, visualizar, editar e excluir dados de forma dinâmica e eficiente",
+    link: "https://github.com/CelestinaGabrielle/CRUD",
+    imageName: "crud.png",
   },
 ];
 
 const Projects: React.FC = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <h2 className="animate">Projetos</h2>
       <div className={styles.projectsList}>
         {projects.map((project, index) => (
@@ -52,18 +56,28 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     threshold: 0.5,
   });
 
+  // Carrega a imagem correspondente ao projeto
+  const [imageSrc, setImageSrc] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const loadImage = async () => {
+      const imagePath = `../../assets/images/${project.imageName}`;
+      if (images[imagePath]) {
+        const imageModule = await images[imagePath]();
+        setImageSrc(imageModule.default);
+      }
+    };
+    loadImage();
+  }, [project.imageName]);
+
   return (
     <div
       ref={ref}
       className={`${styles.projectCard} ${inView ? styles.animate : ""}`}
     >
-      {project.image && (
+      {imageSrc && (
         <div className={styles.imageContainer}>
-          <img
-            src={project.image}
-            alt={project.title}
-            className={styles.image}
-          />
+          <img src={imageSrc} alt={project.title} className={styles.image} />
         </div>
       )}
       <h3>{project.title}</h3>

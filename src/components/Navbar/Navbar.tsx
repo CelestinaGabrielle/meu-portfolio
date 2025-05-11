@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useInView } from "react-intersection-observer";
 
@@ -10,9 +9,17 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.2, 
+    triggerOnce: true,
+    threshold: 0.2,
   });
+
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" }); // Rolagem suave
+      toggleNavbar(); // Fecha o menu (se necessário)
+    }
+  };
 
   return (
     <nav
@@ -21,18 +28,21 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, toggleNavbar }) => {
         inView ? styles.visible : ""
       }`}
     >
-      <h1 className={styles.navTitle}>Bem-vindo ao meu Portfólio</h1>
+      <h1 className={styles.navTitle}>Bem-vindo</h1>
       <ul className={styles.navList}>
         {[
-          { href: "/AboutMe", label: "Sobre" },
-          { href: "/Skills", label: "Habilidades" },
-          { href: "/Projects", label: "Projetos" },
-          { href: "/Contact", label: "Contatos" },
+          { id: "about", label: "Sobre" },
+          { id: "skills", label: "Habilidades" },
+          { id: "projects", label: "Projetos" },
+          { id: "contact", label: "Contatos" },
         ].map((item) => (
-          <li key={item.href} className={styles.navItem}>
-            <Link to={item.href} className={styles.navLink} onClick={toggleNavbar}>
+          <li key={item.id} className={styles.navItem}>
+            <button
+              className={styles.navLink}
+              onClick={() => handleScroll(item.id)}
+            >
               {item.label}
-            </Link>
+            </button>
           </li>
         ))}
       </ul>

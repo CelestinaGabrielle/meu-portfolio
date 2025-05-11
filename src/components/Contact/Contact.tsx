@@ -8,17 +8,31 @@ const Contact: React.FC = () => {
       <p>Você pode me encontrar nas redes sociais ou enviar um e-mail:</p>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/gabrielle-celestina-252564175/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/gabrielle-celestina-252564175/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://github.com/CelestinaGabrielle" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/CelestinaGabrielle"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
         </li>
         <li>
-          <a href="gabriellecelestinaa@gmail.com">E-mail</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriellecelestinaa@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            E-mail
+          </a>
         </li>
       </ul>
     </section>

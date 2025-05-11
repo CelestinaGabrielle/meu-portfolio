@@ -55,7 +55,7 @@
 
 .imageContainer {
   width: 100%;
-  height: 200px;
+  height: 250px; /* Aumenta a altura das imagens */
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -64,12 +64,12 @@
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Garante que a imagem preencha o container sem distorção */
   transition: transform 0.3s ease;
 }
 
 .projectCard:hover .image {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 .projectCard h3 {
@@ -112,7 +112,7 @@
   }
 
   .imageContainer {
-    height: 180px;
+    height: 200px; /* Ajusta a altura para telas menores */
   }
 
   .projectCard h3 {

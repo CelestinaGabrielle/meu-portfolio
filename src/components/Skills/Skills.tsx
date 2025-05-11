@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
   });
 
   return (
-    <section className={styles.skills}>
+    <section className={styles.skills} id="skills">
       <h2 
         ref={titleRef} 
         className={`${styles.title} ${titleInView ? styles.animate : ''}`}

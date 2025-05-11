@@ -32,10 +32,6 @@ const Header: React.FC = () => {
             <img src={isNavbarOpen ? closeIcon : menuIcon} alt="Menu Icon" />
           </button>
           <h1 className={styles.h1}>Portfólio</h1>
-          <div className={styles.toggleSwitch}>
-            <input type="checkbox" id="switch" defaultChecked />
-            <label htmlFor="switch"></label>
-          </div>
         </div>
       </header>
 
