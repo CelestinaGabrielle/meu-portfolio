@@ -5,7 +5,7 @@ import minhaFoto from "../../assets/images/profile-pic.png";
 const Banner: React.FC = () => {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Curriculo_Gabrielle_Celestina.pdf"; // Caminho correto para o arquivo na pasta public
+    link.href = "/Curriculo_Gabrielle_Celestina.pdf";
     link.download = "Curriculo_Gabrielle_Celestina.pdf";
     link.click();
   };
